@@ -3,7 +3,11 @@ import CategoryData from './_components/CategoryData';
 import { SubCategories } from '@/constants/categories';
 import { getData } from '@/helpers/files.helper';
 
-async function Page({ params }: { params: { category: string } }) {
+type Props = {
+  params: Promise<{ category: string }>;
+};
+
+export default async function Page({ params }: Props) {
   const { category } = await params;
   const categories = SubCategories[category] || [];
   const files = getData(category);
@@ -20,5 +24,3 @@ async function Page({ params }: { params: { category: string } }) {
     </main>
   );
 }
-
-export default Page;
