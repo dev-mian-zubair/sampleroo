@@ -4,6 +4,7 @@ import "./globals.css";
 import { FileText } from "lucide-react";
 import Link from "next/link";
 
+// Initialize fonts
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,8 +16,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sampleroo",
-  description: "Free sample files for developers and testers",
+  title: {
+    default: "Sampleroo - Free Sample Files for Developers & Testers",
+    template: "%s | Sampleroo",
+  },
+  description:
+    "Download free sample files in 50+ formats for developers and testers. Explore over 1000+ files with 100K+ downloads at Sampleroo.",
+  keywords: "sample files, free files, developer tools, tester resources, file formats, Sampleroo",
+  openGraph: {
+    title: "Sampleroo - Free Sample Files for Developers & Testers",
+    description:
+      "Access 1000+ free sample files in 50+ formats for development and testing at Sampleroo.",
+    url: `${process.env.NEXT_PUBLIC_URL}`,
+    siteName: "Sampleroo",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sampleroo - Free Sample Files",
+    description: "1000+ free sample files for developers and testers at Sampleroo.",
+  },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_URL}`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
