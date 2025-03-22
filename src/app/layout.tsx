@@ -27,18 +27,34 @@ export const metadata: Metadata = {
     title: "Sampleroo - Free Sample Files for Developers & Testers",
     description:
       "Access 1000+ free sample files in 50+ formats for development and testing at Sampleroo.",
-    url: `${process.env.NEXT_PUBLIC_URL}`,
+    url: "https://sampleroo.vercel.app/",
     siteName: "Sampleroo",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "https://sampleroo.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sampleroo Sample Files",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sampleroo - Free Sample Files",
     description: "1000+ free sample files for developers and testers at Sampleroo.",
+    images: [
+      {
+        url: "https://sampleroo.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sampleroo Sample Files",
+      },
+    ],
   },
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_URL}`,
+    canonical: "https://sampleroo.vercel.app",
   },
   robots: {
     index: true,

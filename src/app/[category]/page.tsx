@@ -19,11 +19,11 @@ export async function generateMetadata(props: {
     openGraph: {
       title: `${capitalizedCategory} - Sampleroo`,
       description: `Explore ${capitalizedCategory} content on Sampleroo.`,
-      url: `${process.env.NEXT_PUBLIC_URL}/${category}`,
+      url: `https://sampleroo.vercel.app/${category}`,
       type: 'website',
     },
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_URL}/${category}`,
+      canonical: `https://sampleroo.vercel.app/${category}`,
     },
   };
 }
